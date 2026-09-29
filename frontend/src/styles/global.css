@@ -33,3 +33,32 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .link { border: none; background: none; color: var(--brand); cursor: pointer; padding: 0; }
 .page-foot { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
 .error-text { color: #b42318; }
+.ok-text { color: #027a48; }
+
+/* ===== 页签（商业租户等一页多表的场景） ===== */
+.tab-row { display: flex; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid var(--border); }
+.tab-item { border: none; background: none; padding: 8px 14px; cursor: pointer; font-size: 14px; color: var(--muted); border-bottom: 2px solid transparent; }
+.tab-item.active { color: var(--brand); border-bottom-color: var(--brand); font-weight: 600; }
+
+/* ===== 弹窗表单 ===== */
+.modal-mask { position: fixed; inset: 0; background: rgba(16, 24, 40, 0.45); display: flex; align-items: center; justify-content: center; z-index: 20; }
+.modal { background: #fff; border-radius: 10px; width: 480px; max-width: 92vw; padding: 18px 20px; }
+.modal-title { margin: 0 0 14px; font-size: 16px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; }
+.form-item { display: flex; flex-direction: column; gap: 4px; }
+.form-item.full { grid-column: 1 / -1; }
+.form-item label { font-size: 12px; color: var(--muted); }
+.form-item input { border: 1px solid var(--border); border-radius: 6px; padding: 7px 9px; font-size: 13px; }
+.modal-foot { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+
+/* ===== 账单导入结果 ===== */
+.import-panel { border: 1px solid var(--border); border-radius: 8px; background: #fff; margin-bottom: 12px; }
+.import-head { display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: 13px; }
+.import-table { width: 100%; border-collapse: collapse; }
+.import-table th, .import-table td { border-bottom: 1px solid var(--border); padding: 6px 10px; font-size: 12px; text-align: left; }
+.tag { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 12px; }
+.tag.ok { background: #e7f8f0; color: #027a48; }
+.tag.bad { background: #fef3f2; color: #b42318; }
+.tag.paid { background: #e7f8f0; color: #027a48; }
+.tag.due { background: #fff7e6; color: #b54708; }
+.hint-text { font-size: 12px; color: var(--muted); }

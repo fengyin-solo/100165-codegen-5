@@ -85,3 +85,6 @@ desktop.ini
 *.db
 *.pid
 *.seed
+
+# ===== 商业租户本地数据 =====
+backend/tenant_data.json
