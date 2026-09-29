@@ -244,3 +244,32 @@ class TrainingEntry(BaseModel):
     field_5: str | None = None  # 考核成绩
     field_6: str | None = None  # 培训日期
     field_7: str | None = None  # 培训状态
+
+
+class ImportLineResult(BaseModel):
+    """账单逐行导入结果：哪一行、是否入账、跳过原因都要能对得上。"""
+
+    line: int
+    ok: bool
+    message: str
+    raw: dict[str, Any] = Field(default_factory=dict)
+
+
+class BillImportResult(BaseModel):
+    """一批账单导入核销后的汇总：总行数、入账数、跳过数与逐行明细。"""
+
+    file_name: str
+    total: int = 0
+    imported: int = 0
+    skipped: int = 0
+    missing_columns: list[str] = Field(default_factory=list)
+    results: list[ImportLineResult] = Field(default_factory=list)
+
+
+class LedgerSummary(BaseModel):
+    """租金台账合计口径：清单导出与页面卡片共用这一份数字。"""
+
+    count: int = 0
+    due_total: float = 0.0
+    paid_total: float = 0.0
+    unpaid_total: float = 0.0

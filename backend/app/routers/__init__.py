@@ -24,5 +24,6 @@ from app.routers import safety as router_safety
 from app.routers import agreement as router_agreement
 from app.routers import settlement as router_settlement
 from app.routers import training as router_training
+from app.routers import tenant as router_tenant
 
-ROUTERS = [router_flight, router_stand, router_apron, router_bridge, router_deicing, router_fueling, router_baggage, router_cargo, router_catering, router_shuttle, router_towing, router_loadsheet, router_permit, router_gse, router_safety, router_agreement, router_settlement, router_training]
+ROUTERS = [router_flight, router_stand, router_apron, router_bridge, router_deicing, router_fueling, router_baggage, router_cargo, router_catering, router_shuttle, router_towing, router_loadsheet, router_permit, router_gse, router_safety, router_agreement, router_settlement, router_training, router_tenant]

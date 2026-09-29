@@ -19,6 +19,7 @@ const Safety = () => import('@/views/safety/index.vue')
 const Agreement = () => import('@/views/agreement/index.vue')
 const Settlement = () => import('@/views/settlement/index.vue')
 const Training = () => import('@/views/training/index.vue')
+const Tenant = () => import('@/views/tenant/index.vue')
 
 const router = createRouter({
   history: createWebHistory(),
@@ -42,6 +43,7 @@ const router = createRouter({
     { path: '/agreement', name: 'agreement', component: Agreement },
     { path: '/settlement', name: 'settlement', component: Settlement },
     { path: '/training', name: 'training', component: Training },
+    { path: '/tenant', name: 'tenant', component: Tenant },
   ],
 })
 
